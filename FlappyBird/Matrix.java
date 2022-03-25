@@ -35,9 +35,13 @@ public class Matrix {
   public static float[][] genRandMatrix(int rows, int cols) {
     float[][] mat = new float[rows][cols];
     //traverse through mat matrix
-    
+    for (int i = 0; i < mat.length; i++) {
+      for (int j = 0; j < mat[0].length; j++) {
         //set each element to Math.random()
-        
+        mat[i][j] = (float) Math.random() * 4 - 2;
+      }
+    }
     //return answer
+    return mat;
   }
 }
